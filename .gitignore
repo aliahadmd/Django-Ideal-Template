@@ -19,8 +19,8 @@ __pycache__/
 local_settings.py
 
 # Ignore media and static files
-/static
-/media
+# /static
+# /media
 
 # Ignore environment files
 .env
