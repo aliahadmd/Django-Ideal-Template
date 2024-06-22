@@ -10,3 +10,4 @@ gunicorn-access
 gunicorn-error
 /gunicorn-access
 /gunicorn-error
+log
