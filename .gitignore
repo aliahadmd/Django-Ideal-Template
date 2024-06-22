@@ -1,13 +1,39 @@
-.venv
+# folder
 node_modules
 staticfiles
-venv
-gunicorn-access.log
-gunicorn-error.log
-/gunicorn-access.log
-/gunicorn-error.log
-gunicorn-access
-gunicorn-error
-/gunicorn-access
-/gunicorn-error
 log
+
+# Ignore the __pycache__ directories and .pyc files
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Django specific ignores
+*.log
+*.pot
+*.py[cod]
+# *.sqlite3
+# db.sqlite3
+
+# If you are using local settings
+local_settings.py
+
+# Ignore media and static files
+/static
+/media
+
+# Ignore environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore JetBrains IDE project files
+.idea/
+
+# Ignore VSCode settings
+.vscode/
+
