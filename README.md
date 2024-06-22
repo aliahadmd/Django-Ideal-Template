@@ -1,6 +1,3 @@
-## How to deploy
-
-
 # Django Production Deployment Guide
 
 This guide outlines the steps to deploy a Django application on a VPS server using PM2, Gunicorn, and Nginx.
