@@ -2,3 +2,11 @@
 node_modules
 staticfiles
 venv
+gunicorn-access.log
+gunicorn-error.log
+/gunicorn-access.log
+/gunicorn-error.log
+gunicorn-access
+gunicorn-error
+/gunicorn-access
+/gunicorn-error
