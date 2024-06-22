@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+{% for task in tasks %}
+
+<ul>
+    <li class="py-5"><a href="{% url "task-detail" task.pk %}">{{task.name}}</a></li>
+    <hr>
+</ul>
+
+{% endfor %}
+
+{% endblock content %}
