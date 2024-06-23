@@ -18,20 +18,40 @@
                 </div>
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="{% url "task-list" %}">Home</a></li>
-                        <li><a href="{% url "task-create" %}">Create a Task</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a href="{% url "task-list" %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url "task-create" %}">Create a Task</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </header>
-    
         <main class="container mx-auto flex-grow p-4">
-            {% block content %}
-            <!-- Page-specific content goes here -->
-            {% endblock %}
+            {% comment %} notification/message based on actions {% endcomment %}
+            {% if messages %}
+                <div class="alert-notification">
+                    {% for message in messages %}
+                        <div class="flex justify-between alert alert-{{ message.tags }} shadow-lg mb-4"
+                             id="alert-{{ forloop.counter0 }}">
+                            <div>
+                                <span>{{ message }}</span>
+                            </div>
+                            <button type="button"
+                                    class="btn btn-sm btn-circle btn-ghost"
+                                    onclick="document.getElementById('alert-{{ forloop.counter0 }}').remove()">
+                                ✕
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% block content %}{% endblock %}
         </main>
-    
         <footer class="bg-neutral text-neutral-content p-4">
             <div class="container mx-auto text-center">
                 <p>&copy; {% now "Y" %} My Django Site. All rights reserved.</p>

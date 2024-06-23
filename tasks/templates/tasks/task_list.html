@@ -2,13 +2,28 @@
 
 {% block content %}
 
-{% for task in tasks %}
-
-<ul>
-    <li class="py-5"><a href="{% url "task-detail" task.pk %}">{{task.name}}</a></li>
-    <hr>
-</ul>
-
-{% endfor %}
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+      <tr>
+        <td>
+          <a href="{% url 'task-detail' task.pk %}" class="link link-hover">{{task.name}}</a>
+        </td>
+        <td>{{task.created_at}}</td>
+        <td>{{task.updated_at}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endblock content %}
