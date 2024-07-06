@@ -1,3 +1,18 @@
+# Get Start
+
+To get started with this project, follow these steps:
+- 1. Clone the repository to your local machine using `git clone https://github.com/aliahadmd/Django-Ideal-Template.git`
+- 2. Install all necessary dependencies by running `npm install` in the project directory
+- 3. Create a virtual environment for the project using `python -m venv env`
+- 4. Activate the virtual environment by running `source env/bin/activate` on Mac/Linux or `.\env\Scripts\activate` on Windows
+- 5. Install all necessary Python packages by running `pip install -r requirements.txt`
+- 6. Run `python manage.py makemigrations` to create the initial migrations
+- 8. Run `python manage.py migrate` to migrate the database
+- 9. Run `python manage.py migrate` to apply the migrations
+- 10. Run the project locally using `python manage.py runserver`
+- 11. Access the project at `http://localhost:8000/` in your browser
+
+
 # Django Production Deployment Guide
 
 This guide outlines the steps to deploy a Django application on a VPS server using PM2, Gunicorn, and Nginx.
